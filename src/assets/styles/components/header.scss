@@ -1,0 +1,133 @@
+.header{
+    &__left{
+        margin-top: 63px;
+        display: flex;
+        flex-direction: column;
+        gap: 144px; 
+        @include media($xl){
+            width: 100%;
+        }
+        @include media(410px){
+            gap: 60px;
+        }
+ 
+    }
+    &__right{
+        max-width: 672px;
+        width: 100%;
+        position: relative;
+        height: 626px;
+        &-img{
+            position: absolute;
+            z-index: 9999;
+            bottom: 0;
+            left: 50%;
+            padding: 28px;
+            border-radius: 50%;
+            background: $white;
+        }
+        @include media($xl){
+         display: none;   
+        }
+    }
+    &__container {
+        @extend .container;
+        @extend .row;
+        justify-content: space-between;
+        margin-bottom: 120px; 
+    }
+    &__nav {
+        @extend .row;
+        justify-content: space-between;
+        align-items: center;
+        @include media(410px){
+            flex-direction: column;
+            gap: 30px;
+        }
+        &-title{
+            font-size: 24px;
+            line-height: 29px;
+            color: $darkBlack;
+            font-family: 'CS';
+        }
+        &-left {
+            @extend .row;
+            gap: 12px;
+            align-items: center;
+        }
+        &-menu {
+            @extend .row;
+            gap: 56px;
+            @include media($xl){
+                gap: 20px;
+            }
+        }
+        &-link{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(18, 18, 18, 0.4);
+        }
+    }
+    &__content{
+        @include media($xl){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-block{
+                gap: 0px;
+            }
+            &-icons{
+                gap: 4px;
+            }
+        }
+        &-title{
+            color: $darkBlack;
+            font-size: 56px;
+            line-height: 67px;
+            font-family: 'CS';
+            max-width: 469px;
+            width: 100%;
+            @include media(410px){
+                font-size: 40px;
+                line-height: 47px;
+        }
+        }
+        &-title span {
+            color: $orange;
+        }
+        &-descr{
+            max-width: 398px;
+            width: 100%;
+            color: $grey;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 16px;
+            margin-bottom: 33px;
+        }
+        &-block{
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 192px;
+            background: $orange;
+            height: 60px;
+            color: $white;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &-icons {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+    }
+}
