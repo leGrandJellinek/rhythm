@@ -1,16 +1,46 @@
 <template>
     <main class="main">
         <Store />
+        <Categories :categoriesItems="categoriesItems" />
+        <Brands :brands="brands"/>
     </main>
 </template>
 
 <script>
 
 import Store from '@/components/main/Store.vue';
+import Categories from '@/components/main/Categories.vue';
+import Brands from '@/components/main/Brands.vue'
 
 export default {
     components:{
-        Store
+        Store,
+        Categories,
+        Brands
+    },
+    data(){
+        return {
+            categoriesItems: [{
+                id:1,
+                title: 'Acoustic',
+                img: '@/assets/images/main/categories/main__categories-img1.png'
+            },
+            {   
+                id:2,
+                title: 'Electric',
+                img: '@/assets/images/main/categories/main__categories-img2.png'
+            },
+            {
+                id:3,
+                title: 'Basses',
+                img: '@/assets/images/main/categories/main__categories-img3.png'
+            },
+            {   
+                id:4,
+                title: 'Collections',
+                img: '@/assets/images/main/categories/main__categories-img4.png'
+            }]
+        }
     }
 }
 </script>

@@ -1,0 +1,42 @@
+.main__categories{
+    margin-bottom: 220px;
+    @include media($lg){
+        &-h2{
+            text-align: center;
+        }
+        &-block{
+            justify-content: center
+        }
+    }
+    &-container{
+        @extend .container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+    &-block{
+        @extend .row;
+        gap: 70px;
+    }
+    &-item{
+        position: relative;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    &-img{
+        width: 100%;
+        height: 100%;
+    }
+    &-title {
+        position: absolute;
+        z-index: 999;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        color: $white;
+    }
+}
