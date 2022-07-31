@@ -1,0 +1,89 @@
+.main__customers{
+    &-container {
+        @extend .container;
+    }
+    &-left {
+        position: relative;
+        &::after{
+            content:  "";
+            display: block;
+            background: #FF6428;
+            width: 280px;
+            height: 250px;
+            border-radius: 40px 0px 400px 400px;
+            position: absolute;
+            transform: rotate(-7.72deg);
+            left: -71px;
+            top: 50px; 
+            z-index: -999;
+            @include media($xs){
+                left: -22px;
+            }
+            @include media(411px){
+                left: 0;
+
+            }
+        }
+    }
+    &-block {
+        @extend .row;
+        justify-content: center;
+        margin-top: 109px;
+        gap: 140px;
+        margin-bottom: 240px;
+        @include media($lg){
+            gap: 70px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &-descr {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 160%;
+        color: $grey;
+        max-width: 524px;
+        width: 100%;
+    }
+    &-right{
+        &-block{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 56px;
+        }
+    }
+    &-names{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &-name {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 160%;
+        color: $black;
+    }
+    &-job {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.08em;
+        color: #868686;
+    }
+    &-dots{
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+    }
+    &-dot{
+        width: 10px;
+        height: 16px;
+        background: #C4C4C4;
+        border-radius: 20px;
+        margin-bottom: 8px;
+    }
+    &-dot.active {
+        background: #FF6428;
+        transform: rotate(-90deg);
+    }
+}

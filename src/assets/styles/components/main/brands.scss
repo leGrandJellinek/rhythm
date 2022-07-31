@@ -4,7 +4,7 @@
     //     &-block{
     //         gap: 50px;
     //     }
-    }
+    //}
     &-container {
         @extend .container;
         display: flex;
@@ -17,6 +17,10 @@
         gap: 160px;
         @include media($lg){
             gap: 50px;
+        }
+        @include media($sm){
+            gap: 60px;
+            justify-content: space-between;
         }
     }
     &-item{

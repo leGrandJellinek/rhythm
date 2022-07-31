@@ -3,6 +3,8 @@
         <Store />
         <Categories :categoriesItems="categoriesItems" />
         <Brands :brands="brands"/>
+        <Company :aboutList="aboutList"/>
+        <Customers />
     </main>
 </template>
 
@@ -10,13 +12,17 @@
 
 import Store from '@/components/main/Store.vue';
 import Categories from '@/components/main/Categories.vue';
-import Brands from '@/components/main/Brands.vue'
+import Brands from '@/components/main/Brands.vue';
+import Company from '@/components/main/Company.vue';
+import Customers from '@/components/main/Customers.vue';
 
 export default {
     components:{
         Store,
         Categories,
-        Brands
+        Brands,
+        Company,
+        Customers
     },
     data(){
         return {
@@ -39,6 +45,21 @@ export default {
                 id:4,
                 title: 'Collections',
                 img: '@/assets/images/main/categories/main__categories-img4.png'
+            }],
+            aboutList: [{
+                title: 'Smooth Browsing',
+                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                icon: 'group.svg'
+            },
+            {
+                title: 'EASY Delivery',
+                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                icon: 'car.svg'
+            },
+            {
+                title: 'SwiFT PAYMENTS',
+                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                icon: 'wallet.svg'
             }]
         }
     }
