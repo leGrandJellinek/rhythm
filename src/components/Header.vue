@@ -8,9 +8,7 @@
                             <h2 class="header__nav-title">Rhythm</h2>
                         </div>
                         <ul class="header__nav-menu">
-                            <li><a href="" class="header__nav-link">Store</a></li>
-                            <li><a href="" class="header__nav-link">Collections</a></li>
-                            <li><a href="" class="header__nav-link">Support</a></li>
+                            <li v-for="item in menuList" :key="item.id"><a :href="`#${item.id}`" class="header__nav-link">{{item.name}}</a></li>
                         </ul>
                     </nav>
                     <div class="header__content">
@@ -39,6 +37,8 @@
 
 <script>
 export default {
-
+    props: {
+        menuList: Array,
+    }
 }
 </script>

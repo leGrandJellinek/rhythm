@@ -1,10 +1,10 @@
 <template>
-    <section class="main__store">
+    <section class="main__store" id="Store">
         <div class="main__store-container">
             <h2 class="title">Check out the <span>Store</span></h2>
             <div class="main__store-titles">
                 <h2 class="main__store-title">NEW ON THE BOARD</h2>
-                <h3 class="main__store-view">view all</h3>
+                <a href="#!" class="main__store-view">view all</a>
             </div>
             <div class="main__store-block">
                 <div class="main__store-item" v-for="(item,index) in firstArr" :key="item.id">
@@ -15,7 +15,7 @@
             </div>
             <div class="main__store-titles">
                 <h2 class="main__store-title">NEW ON THE BOARD</h2>
-                <h3 class="main__store-view">view all</h3>
+                <a href="#!" class="main__store-view">view all</a>
             </div>
             <div class="main__store-block">
                 <div class="main__store-item" v-for="(item,index) in secondArr" :key="item.id">
