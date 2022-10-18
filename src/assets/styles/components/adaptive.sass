@@ -1,0 +1,42 @@
+@include media(1320px)
+    .header
+        &__content
+            &-title 
+                text-align: center
+            &-descr 
+                text-align: center
+            &.mobile
+                opacity: 1
+                transform: translate(0%, 0%)
+
+@include media(992px)
+    .header
+        &__nav
+            &-menu
+                position: absolute
+                flex-direction: column
+                align-content: center
+                justify-content: center
+                background: white
+                gap: 60px
+                right:  -150%
+                top: 0
+                z-index: 999999
+                transition: all 500ms
+                width: 100vw
+                height: 100vh
+                &.active
+                    right: 0
+            &-link
+                font-size: 32px
+            &-close 
+                display: block
+                position: absolute
+                top: 40px
+                right: 40px
+        
+
+@include media(410px)
+    .header 
+        &__nav 
+            flex-direction: row

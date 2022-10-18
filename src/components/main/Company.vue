@@ -3,11 +3,10 @@
         <div class="main__about-container">
             <h2 class="title main__about-h2">Why try <span>Rhythm?</span></h2>
             <div class="main__about-block">
-                <div class="main__about-item" v-for="(item, index) in aboutList" :key="index">
-                    <img :src="require(`@/assets/images/icons/${item.icon}`)" alt="" class="main__about-icon">
-                    <h2 class="main__about-title">{{item.title}}</h2>
-                    <p class="main__about-descr">{{item.descr}}</p>
-                </div>
+                <CompanyItem 
+                v-for="item in aboutList" 
+                :key="item.id"
+                :item="item"/>
             </div>
         </div>
     </section>
@@ -15,9 +14,33 @@
 
 <script>
 
+import CompanyItem from "@/components/main/CompanyItem.vue";
+
 export default {
-    props:{
-        aboutList: Array
+    components: {
+        CompanyItem,
+    },
+    data(){
+        return {
+            aboutList: [{
+                id: 1,
+                title: 'Smooth Browsing',
+                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                icon: 'group.svg'
+            },
+            {   
+                id:2,
+                title: 'EASY Delivery',
+                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                icon: 'car.svg'
+            },
+            {
+                id:3,
+                title: 'SwiFT PAYMENTS',
+                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                icon: 'wallet.svg'
+            }]
+        }
     }
 }
 

@@ -11,6 +11,7 @@
 import Header from '@/components/Header.vue';
 import Main from '@/components/Main.vue';
 import Footer from "@/components/Footer.vue";
+import {scrollAnimation, offset} from "@/assets/scripts/scrollAnimation.js"
 
 export default {
     components:{
@@ -33,6 +34,12 @@ export default {
                 name: 'Support'
             }]
         }
+    },
+    created(){
+        window.addEventListener("scroll", scrollAnimation);
+    },
+    mounted(){
+        scrollAnimation()
     }
 }
 </script>

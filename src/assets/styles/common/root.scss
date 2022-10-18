@@ -31,3 +31,14 @@ body{
 .title span{
     color: $orange;
 }
+
+::-webkit-scrollbar {
+    width: 10px; /* ширина нового скроллбара */
+}
+::-webkit-scrollbar-thumb {
+    background: $orange;
+    border-radius: 8px;
+    &:hover {
+        background:  rgb(238, 144, 109);
+    }
+}
