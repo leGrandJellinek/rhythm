@@ -1,6 +1,6 @@
 <template>
     <main class="main">
-        <Store />
+        <Store/>
         <Categories/>
         <Brands/>
         <Company/>
@@ -15,7 +15,6 @@ import Categories from '@/components/main/Categories.vue';
 import Brands from '@/components/main/Brands.vue';
 import Company from '@/components/main/Company.vue';
 import Customers from '@/components/main/Customers.vue';
-
 export default {
     components:{
         Store,
@@ -23,6 +22,8 @@ export default {
         Brands,
         Company,
         Customers
+    },
+    mounted(){
     }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
     <section class="main__store" id="Store">
         <div class="main__store-container">
-            <h2 class="title">Check out the <span>Store</span></h2>
+            <h2 class="title wow pulse">Check out the <span>Store</span></h2>
             <StoreBlock 
             v-for="(arr,index) in storeProducts" 
             :key="index"
@@ -12,6 +12,7 @@
 
 <script>
 import StoreBlock from "@/components/main/StoreBlock.vue";
+import {WOW} from "wowjs"
 export default {
     components: {
         StoreBlock,
@@ -59,6 +60,9 @@ export default {
         }
     },
     methods:{
+    },
+    mounted(){
+        new WOW({live: false}).init() 
     }
 }
 </script>

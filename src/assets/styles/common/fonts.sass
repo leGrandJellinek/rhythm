@@ -1,0 +1,11 @@
+$Poppins: ('Medium', 500),('Regular',400),('SemiBold',600)
+
+@each $name , $weight in $Poppins 
+    @font-face 
+        font-family: 'Poppins'
+        src: url(@/assets/fonts/Poppins/Poppins-#{$name}.ttf)
+        font-weight: $weight
+    
+@font-face 
+    font-family: 'CS'
+    src: url('@/assets/fonts/CalSans/CalSans-SemiBold.ttf')

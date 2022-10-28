@@ -6,3 +6,5 @@ app.mount('#app')
 
 import "@/assets/scripts/scrollAnimation.js";
 import '@/assets/styles/style.scss';
+import "wowjs/css/libs/animate.css"
+import "animate.css"
